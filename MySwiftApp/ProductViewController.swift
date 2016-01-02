@@ -9,6 +9,8 @@
 import UIKit
 
 class ProductViewController: UIViewController {
+    
+    var productName: String?
 
     @IBOutlet weak var ProductNameLabel: UILabel!
     
@@ -19,8 +21,11 @@ class ProductViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        ProductNameLabel.text = "Telefono de 1937"
+        ProductNameLabel.text = productName
         ProductImageView.image = UIImage(named: "phone-fullscreen3")
     }
 
+    @IBAction func addToCartPressed(sender: AnyObject) -> Void {
+        print("Boton presionado.")
+    }
 }

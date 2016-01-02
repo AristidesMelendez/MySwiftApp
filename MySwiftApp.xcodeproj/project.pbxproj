@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D873D1BE1C35E44300F20DB1 /* ContacViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D873D1BD1C35E44300F20DB1 /* ContacViewController.swift */; };
+		D873D1C01C36356F00F20DB1 /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D873D1BF1C36356F00F20DB1 /* ProductsTableViewController.swift */; };
 		D8B558621C3508BD004C14AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B558611C3508BD004C14AB /* AppDelegate.swift */; };
 		D8B558671C3508BD004C14AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8B558651C3508BD004C14AB /* Main.storyboard */; };
 		D8B558691C3508BD004C14AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8B558681C3508BD004C14AB /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D873D1BD1C35E44300F20DB1 /* ContacViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContacViewController.swift; sourceTree = "<group>"; };
+		D873D1BF1C36356F00F20DB1 /* ProductsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
 		D8B5585E1C3508BD004C14AB /* MySwiftApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySwiftApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8B558611C3508BD004C14AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8B558661C3508BD004C14AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 				D8B5586A1C3508BD004C14AB /* LaunchScreen.storyboard */,
 				D8B5586D1C3508BD004C14AB /* Info.plist */,
 				D8B558731C352508004C14AB /* ProductViewController.swift */,
+				D873D1BD1C35E44300F20DB1 /* ContacViewController.swift */,
+				D873D1BF1C36356F00F20DB1 /* ProductsTableViewController.swift */,
 			);
 			path = MySwiftApp;
 			sourceTree = "<group>";
@@ -136,6 +142,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8B558741C352508004C14AB /* ProductViewController.swift in Sources */,
+				D873D1C01C36356F00F20DB1 /* ProductsTableViewController.swift in Sources */,
+				D873D1BE1C35E44300F20DB1 /* ContacViewController.swift in Sources */,
 				D8B558621C3508BD004C14AB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +292,7 @@
 				D8B558721C3508BD004C14AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
