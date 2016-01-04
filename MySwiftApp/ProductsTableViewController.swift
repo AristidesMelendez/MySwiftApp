@@ -10,25 +10,25 @@ import UIKit
 
 class ProductsTableViewController: UITableViewController {
     
-    var productNames: [String]?
+    var products: [Product]?
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ProductCell", forIndexPath: indexPath)
         
-        let productName = productNames?[indexPath.row]
-        if let pName = productName {
-            cell.textLabel?.text = pName
+        let productName = products?[indexPath.row]
+        if let p = productName {
+            cell.textLabel?.text = p.name
+            if let i = p.cellImage {
+                cell.imageView?.image = UIImage(named: i)
+            }
+
         }
-        
-        //cell.textLabel?.text = "Hola Aristides"
-        cell.imageView?.image = UIImage(named: "image-cell2")
         return cell
-        
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if let pNames =  productNames {
+        if let pNames =  products {
             return pNames.count
         }
         return 0
@@ -37,7 +37,6 @@ class ProductsTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ShowProduct" {
             let productVC = segue.destinationViewController as? ProductViewController
-            productVC?.productName = "Telefono viejo"
             
             // get the cell that was tapped
             
@@ -52,14 +51,35 @@ class ProductsTableViewController: UITableViewController {
                     return
             }
             
-            productVC?.productName =  productNames?[indexPath.row]
+            productVC?.product =  products?[indexPath.row]
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        productNames = ["1907 pared", "1921 telefono de rueda", "1937 telefono de mesa", "1984 Motorola"]
+        let product1 = Product()
+        let product2 = Product()
+        let product3 = Product()
+        let product4 = Product()
+        
+        product1.name = "1907 pared"
+        product1.cellImage = "image-cell1"
+        product1.productImage = "phone-fullscreen1"
+        
+        product2.name = "1921 telefono de rueda"
+        product2.cellImage = "image-cell2"
+        product2.productImage = "phone-fullscreen2"
+        
+        product3.name = "1937 telefono de mesa"
+        product3.cellImage = "image-cell3"
+        product3.productImage = "phone-fullscreen3"
+        
+        product4.name = "1984 Motorola"
+        product4.cellImage = "image-cell4"
+        product4.productImage = "phone-fullscreen4"
+        
+        products = [product1, product2, product3, product4]
     }
 
 }

@@ -10,7 +10,7 @@ import UIKit
 
 class ProductViewController: UIViewController {
     
-    var productName: String?
+    var product: Product?
 
     @IBOutlet weak var ProductNameLabel: UILabel!
     
@@ -19,10 +19,13 @@ class ProductViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        
-        ProductNameLabel.text = productName
-        ProductImageView.image = UIImage(named: "phone-fullscreen3")
+        if let p = product {
+            ProductNameLabel.text = p.name
+            if let i = p.productImage {
+                ProductImageView.image = UIImage(named: i)
+            }
+        }
+
     }
 
     @IBAction func addToCartPressed(sender: AnyObject) -> Void {
